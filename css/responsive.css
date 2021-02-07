@@ -41,9 +41,6 @@
     .ai-items{
         align-items: center;
     }
-    #cover{
-        height: 365px;
-    }
     button{
         width: 95px;
         height: 30px;
@@ -71,6 +68,30 @@
         margin: 40px 0px 20px;
     }
 }
+@media screen and (max-width: 770px){
+   
+    header .central-positioning, #hamburger{
+        width: 100%;
+    }
+    #logo img{
+        width: 60px
+    }
+    #hamburger{
+        display: initial;
+        background-color: black;
+        padding: 10px
+    }
+    #cover{
+        height: 580px;
+    }
+    header{
+        text-align: center;
+    }
+    header nav{
+        display: none;
+    }
+}
+
 @media screen and (max-width: 740px){
     .circle{
         margin: 74px;
@@ -86,18 +107,13 @@
     }
 }
 @media screen and (max-width: 590px){
-    #logo img{
-        width: 60px
-    }
-    header{
-        text-align: center;
-    }
-    header nav ul li{
+   
+    /* header nav ul li{
         margin: 0px 9px;
     }
     header nav ul li a{
         font-size: 12px;
-    }
+    } */
     #cover{
         height: 400px;
     }
@@ -107,9 +123,7 @@
     
 }
 @media screen and (max-width:380px){
-    header .central-positioning{
-        width: 100%;
-    }
+   
     header nav ul li a{
         font-size: 10px;
     }
