@@ -1,0 +1,224 @@
+:root{
+	--yellow: #EDB803;
+	--mustard: #B28A02;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+@font-face {
+	font-family: font;
+	src: url(../fonts/ProductSansRegular.ttf);
+}
+@font-face {
+	font-family: naslov;
+	src: url(../fonts/ProductSansBoldItalic.ttf);
+}
+body, html{
+	height: 100%;
+	margin: 0px;
+}
+body{
+    font-family: font;
+	line-height: 30px;
+	background-color: white;
+}
+body, a{
+	color: black;
+}
+a{
+	text-decoration: none;
+	text-transform: uppercase;
+}
+ul{
+	list-style-type: none;
+}
+.central-positioning{
+	width: 80%;
+	margin: 0px auto;
+}
+.d-flex{
+	display: flex;
+	flex-wrap: wrap;
+}
+.space-between{
+	justify-content: space-between;
+}
+.padding-top-40{
+	padding-top: 34.5px ;
+}
+header nav ul li{
+	margin: 0px 20px;
+}
+nav ul li{
+	background-image: linear-gradient(black, black);
+	background-size: 0 2px, auto;
+	background-repeat: no-repeat;
+	background-position: center bottom;
+	transition: all .4s ease-out;
+}
+nav ul li:hover{
+	background-size: 100% 2px;
+}
+#hamburger{
+	display: none;
+}
+#hamburger div{
+	width: 35px;
+	height: 4px;
+	background-color: white;
+	margin: 5px auto;
+}
+/* main pocetak */
+#cover{
+	background-image: url("../img/cover1.jpg");
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: cover;
+	/* height: 702px; */
+	height: calc(100% - 95px);
+	position: relative;
+}
+#hero{
+	position: absolute;
+	width: 45%;
+	right: 200px;
+	top: 40%;
+	font-family: naslov;
+	/* padding-right: 10%; */
+	font-size: 38px;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+h1{
+	margin-bottom: 20px;
+	line-height: initial;
+}
+/* .flex-end{
+	justify-content: flex-end;
+	align-items: center;
+} */
+button{
+	background-color: black;
+	width: 150px;
+	height: 40px;
+	cursor: pointer;
+	border-radius: 30px;
+	color: white;
+	border: 1px solid black;
+}
+button:hover{
+	background-color: inherit;
+	color: black;
+	border: none;
+	transition: ease-in 0.5s;
+	font-weight: bold;
+}
+/* ending section main */
+/* start section skills */
+.info{
+	padding: 50px 0px;
+	width: 30%;
+	text-align: justify;
+}
+h2{
+	text-align: center;
+	font-size: 30px;
+	font-family: naslov;
+}
+.skills-icon, .circle{
+	text-align: center;
+	font-size: 3.125em;
+}
+.info h3{
+	text-align: left;
+}
+.padding-top-bottom{
+	padding: 30px 0px;
+}
+.padding-bottom{
+	padding-bottom: 90px;
+}
+/* ending section skills */
+/* start section services */
+.yellow{
+	background-color: var(--yellow);
+}
+.circle{
+	padding: 50px;
+	border-radius: 50%;
+	margin: 30px;
+
+}
+.color-mustard{
+	background-color: var(--mustard);
+	/* box-shadow: 0px 0px 8px black; */
+	box-shadow: 3px 3px 7px black;
+}
+h3{
+	text-align: center;
+}
+/* ending section services */
+/* start section projects */
+.images{
+	background-color: var(--yellow);
+}
+.text{
+	text-align: center;
+}
+.center{
+	justify-content: center;
+}
+.block-width-height{
+	width: 500px;
+	height: 250px;
+}
+/* ending section projects */
+/* start section about me */
+.w-40{
+	width: 40%;
+}
+/* ending section about me */
+/* start section contact */
+.icon-box{
+	background-color: var(--yellow);
+	width: 150px;
+	height: 10px;
+	padding: 0px 10px;
+}
+.contact-icon{
+	font-size: 20px;
+	margin-right: 40px;
+}
+.align-items-center{
+	align-items: center;
+}
+.width-300-height-30{
+	width: 300px;
+	height: 30px;
+}
+textarea{
+	width: 300px;
+	height: 100px;
+}
+::placeholder{
+	color: black;
+}
+iframe{
+	width: 300px;
+	height: 500px;
+}
+/* ending section contact */
+/* start section footer */
+footer{
+	padding: 10px 0px;
+}
+.contact-icon:hover{
+	color: white;
+	opacity: 0.5;
+	transition: ease-in 0.2s;
+}
+/* ending section footer */
