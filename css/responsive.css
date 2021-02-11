@@ -3,16 +3,32 @@
         width: 54%;
         font-size: 35px;
     }
+    .project-image{
+        width: 400px;
+    }
 }
 @media screen and (max-width: 1156px){
     #hero{
         width: 60%;
+    }
+    .project-image{
+        width: 350px;
     }
 }
 @media screen and (max-width: 1045px){
     #hero{
         width: 65%;
     }
+    .project-image{
+        width: 500px;
+    }
+   #first-caption{
+       margin-bottom: 50px;
+    }
+    .space-around{
+        justify-content: space-around;
+    }
+    
 }
 @media screen and (max-width:1025px){
     #hero{
@@ -20,22 +36,48 @@
         padding-right: 11%;
         font-size: 3.2vw;
     }
-    /* #cover{
-        height: 520px;
-    } */
     button{
         width: 125px;
         height: 35px;
     }
+    .circle{
+        padding: 40px;
+        font-size: 40px;
+    }
 }
 @media screen and (max-width: 800px)
 {
+    .space-between{
+        justify-content: space-around;
+    }
     header .central-positioning{
         flex-direction: column;
+        width: 100%;
     }
+    /* nav */
     .padding-top-40{
-        padding-top: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
     }
+    #list{
+        display: none;
+    }
+    #hamburger{
+        display: initial;
+    }
+    nav{
+        background-color: black;
+        width: 100%;
+    }
+    nav ul li a{
+        color: white;
+        border-left: 2px solid white;
+        padding-left: 3px;
+    }
+    nav:hover #list{
+        display: block;
+    }
+    
     .ai-items{
         align-items: center;
     }
@@ -43,11 +85,14 @@
         width: 95px;
         height: 30px;
     }
+    button:hover{
+       background-color: black;
+       color: white;
+    }
     /* skills */
     h2{
         padding: 0px;
         font-size: 25px;
-
     }
     .padding-top-bottom {
         padding: 20px 0px;
@@ -57,27 +102,20 @@
         align-items: center;
         padding: 20px 0px 0px;
     }
-    .space-between{
-        justify-content: space-around;
-    }
     .circle{
         padding: 30px;
         font-size: 35px;
         margin: 40px 0px 20px;
     }
+    .contact-icon:hover{
+        color: black;
+        opacity: 1;
+    }
 }
 @media screen and (max-width: 770px){
    
-    header .central-positioning, #hamburger{
-        width: 100%;
-    }
     #logo img{
         width: 60px
-    }
-    #hamburger{
-        display: initial;
-        background-color: black;
-        padding: 10px 0px;
     }
     #cover{
         height: calc(100% - 120px);
@@ -90,17 +128,19 @@
         right: 20px;
         top:50%;
     }
-    header{
+    /* header{
         text-align: center;
-    }
-    header nav{
-        display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 740px){
     .circle{
-        margin: 74px;
+        margin: 40px 101px 10px;
+        padding: 40px;
+        font-size: 40px;
+    }
+    .project-image{
+        width: 450px;
     }
 }
 @media screen and (max-width: 660px){
@@ -113,24 +153,41 @@
     }
 }
 @media screen and (max-width: 590px){
-   
-    /* header nav ul li{
-        margin: 0px 9px;
-    }
-    header nav ul li a{
-        font-size: 12px;
-    } */
-    /* #cover{
-        height: 400px;
-    } */
     #cover{
         background-position: 15%;
     }
+    .project-image{
+        width: 400px;
+    }
 }
-@media screen and (max-width:380px){
+@media screen and (max-width: 550px){
+    .project-image{
+        width: 350px;
+    }
+}
+@media screen and (max-width:480px){
+    .project-image{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 426px){
+    .padding-bottom{
+        padding-bottom: 65px;
+    }
+    .circle{
+        margin: 40px 30px 10px;
+    }
+}
+@media screen and (max-width: 380px){
    
     header nav ul li a{
         font-size: 10px;
+    }
+    #hero{
+        bottom: 50px;
+    }
+    .project-image{
+        width: 250px;
     }
 }@media screen and (max-width:321px){
     #hero{
@@ -139,5 +196,16 @@
     #cover{
         background-position: 15% -55px;
         height: calc(100% - 65px);
+    }
+    .circle{
+        margin: 20px;
+    }.contact-icon{
+        margin-right: 30px;
+    }
+    .justify-320px{
+        align-items: center;
+    }
+    .project-image{
+        width: 200px;
     }
 }

@@ -22,7 +22,13 @@
                     <a href="index.html"><img src="img/logo2.png" alt="logo"></a>
                 </div>
                 <nav class="padding-top-40">
-                    <ul class="d-flex">
+                    <div id="hamburger">
+                        <!-- <i class="fas fa-bars contact-icon" ></i> -->
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <ul id="list" class="d-flex">
                         <li><a href="#1"> skills </a></li>
                         <li><a href="#2"> services </a></li>
                         <li><a href="#3"> projects </a></li>
@@ -30,28 +36,21 @@
                         <li><a href="#5"> contact </a></li>
                     </ul>
                 </nav>
-                <div id="hamburger">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </div>
             </div>
         </header>
         <!-- ending section navigation -->
         <!-- start section main -->
-       
             <section id="cover" class=" d-flex flex-end">
                 <div id="hero">
                     <h1>Creating websites according to your wishes.</h1>
                     <a href="#1"><button>More</button></a>
                 </div>
             </section>
-        
         <!-- ending section main -->
         <!-- start section skills -->
         <div id="1" class="padding-bottom">
             <h2 class="padding-top-bottom">Skills</h2>
-            <div class="central-positioning d-flex space-between">
+            <div class="central-positioning d-flex space-between padding-top">
                 <div class="info">
                     <i class="fab fa-html5 skills-icon"></i>
                         <h3 class="padding-top-bottom">HTML</h3>
@@ -85,7 +84,7 @@
                     <figure>
                         <i class="fas fa-paint-brush circle color-mustard"></i>
                       <figcaption>
-                          <h3>Web Design</h3>
+                          <h3 class="service-h3">Web Design</h3>
                       </figcaption>
                     </figure>
                 </div>
@@ -93,7 +92,7 @@
                     <figure>
                         <i class="fas fa-layer-group circle color-mustard"></i>
                       <figcaption>
-                          <h3>Seo</h3>
+                          <h3 class="service-h3">Seo</h3>
                       </figcaption>
                     </figure>
                 </div>
@@ -101,7 +100,7 @@
                     <figure>
                         <i class="fas fa-magic circle color-mustard"></i>
                       <figcaption>
-                          <h3>Ui/Ux Design</h3>
+                          <h3 class="service-h3">Ui/Ux Design</h3>
                       </figcaption>
                     </figure>
                 </div>
@@ -111,32 +110,28 @@
         <!-- start section projects -->
         <div id="3" class="padding-bottom" >
             <h2 class="padding-top-bottom">Projects</h2>
-            <div class="central-positioning">
-                <div class="d-flex center">
-                    <div class="images block-width-height"></div>
-                    <div class="text block-width-height">
+            <div class="central-positioning d-flex space-between space-around padding-top">
+                <figure >
+                    <a href="https://alexandarsgarage.000webhostapp.com/index.html" target="_blank"><img  class="project-image" src="img/ag.jpg" alt="Project 1"/></a>
+                    <figcaption class="project-caption" id="first-caption">
                         <h3>Alexsndar's garage</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Doloribus, sint iste. Voluptatum voluptates, 
-                        </p>
-                    </div>
-                </div>
-                <div class="d-flex center">
-                    <div class="text block-width-height">
-                        <h3>Alexsndar's garage</h3>
-                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                            Doloribus, sint iste. Voluptatum voluptates, 
-                        </p>
-                    </div>
-                    <div class="images block-width-height"></div>
-                </div>
+                        <p>Static website - HTML - CSS</p>
+                    </figcaption>
+                </figure>
+                <figure>
+                    <img class="project-image" src="img/ag.jpg" alt="Project 1"/>
+                    <figcaption class="project-caption">
+                        <h3>Client Portfolio</h3>
+                        <p>Static website - HTML - CSS - JavaScript</p>
+                    </figcaption>
+                </figure>
             </div>
         </div>
         <!-- ending section projects -->
         <!-- start section about me -->
         <div id="4" class="yellow padding-bottom">
-            <h2 class="padding-top-bottom">About me</h2>
-            <div class="central-positioning d-flex space-between">
+            <h2 class="padding-top-bottom">About Me</h2>
+            <div class="central-positioning d-flex space-between padding-top">
                 <div class="w-40"></div>
                 <div class="w-40 color-mustard">
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
@@ -150,19 +145,44 @@
         <!-- start section contact -->
         <div id="5" class="padding-bottom">
             <h2 class="padding-top-bottom">Contact Me</h2>
-            <div class="central-positioning d-flex space-between">
+            <div class="central-positioning d-flex space-between padding-top">
                 <div class="w-40">
-                    <!-- <div>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1
-                        m3!1d2830.340635090179!2d20.48169131559679!3d44.81462467909868
-                        !2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475a7a960
-                        9031735%3A0x4b2dd3d867d041a!2z0JfQtNGA0LDQstC60LAg0KfQtdC70LDRg
-                        NCwIDE2LCDQkdC10L7Qs9GA0LDQtA!5e0!3m2!1ssr!2srs!4v1612789005389
-                        !5m2!1ssr!2srs" frameborder="0" style="border:0;"
-                         allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                    </div> -->
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr class="yellow height-30">
+                                    <td>
+                                        061 1234567
+                                    </td>
+                                </tr>
+                                <tr class="yellow height-30">
+                                    <td>
+                                        Belgrade, Serbia
+                                    </td>
+                                </tr>
+                                <tr class="yellow">
+                                    <td class="margin-bottom-30">
+                                        marija.filipovic.61.20@ict.edu.rs
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m
+                                         12!1m3!1d2279.172458448405!2d20.480801546845147!3d44.8132
+                                        9615608306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1
+                                        s0x475a7a9609031735%3A0x4b2dd3d867d041a!2z0JfQtNGA0LDQstC60LA
+                                         g0KfQtdC70LDRgNCwIDE2LCDQkdC10L7Qs9GA0LDQtA!5e0!3m2!1ssr!2srs
+                                        !4v1613048191895!5m2!1ssr!2srs" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                             
+                    </div>
                 </div>
-                <!-- <div class="w-40">
+                <div class="w-40">
                     <form action="#" method="get">
                         <table>
                             <thead class="yellow">
@@ -207,14 +227,14 @@
                             </tbody>
                         </table>
                     </form> 
-                </div> -->
+                </div>
             </div>
         </div>
         <!-- ending section contact -->
         <!-- start section footer -->
        <footer class="yellow d-flex align-items-center">
             <div class="central-positioning d-flex space-between">
-                <div id="social" class="d-flex">
+                <div id="social" class="d-flex justify-320px">
                     <a href="https://www.facebook.com/filipovic.marija.12" target="_blank"><i class="fab fa-facebook-f contact-icon"></i></a>
                     <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter contact-icon"></i></a>
                     <a href="https://dribbble.com/" target="_blank"><i class="fas fa-basketball-ball contact-icon"></i></a>

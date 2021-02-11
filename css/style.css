@@ -63,6 +63,8 @@ nav ul li:hover{
 }
 #hamburger{
 	display: none;
+	width: 100%;
+	padding: 10px 0px;
 }
 #hamburger div{
 	width: 35px;
@@ -70,13 +72,12 @@ nav ul li:hover{
 	background-color: white;
 	margin: 5px auto;
 }
-/* main pocetak */
+/* start section main */
 #cover{
 	background-image: url("../img/cover1.jpg");
 	background-position: top left;
 	background-repeat: no-repeat;
 	background-size: cover;
-	/* height: 702px; */
 	height: calc(100% - 95px);
 	position: relative;
 }
@@ -84,7 +85,7 @@ nav ul li:hover{
 	position: absolute;
 	width: 45%;
 	right: 200px;
-	top: 40%;
+	bottom: 30%;
 	font-family: naslov;
 	/* padding-right: 10%; */
 	font-size: 38px;
@@ -92,6 +93,7 @@ nav ul li:hover{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+	background-color: chocolate;
 }
 h1{
 	margin-bottom: 20px;
@@ -119,8 +121,10 @@ button:hover{
 }
 /* ending section main */
 /* start section skills */
+.padding-top{
+	padding-top: 40px;
+}
 .info{
-	padding: 50px 0px;
 	width: 30%;
 	text-align: justify;
 }
@@ -151,30 +155,19 @@ h2{
 	padding: 50px;
 	border-radius: 50%;
 	margin: 30px;
-
 }
 .color-mustard{
-	background-color: var(--mustard);
+	background-color: var(--yellow);
 	/* box-shadow: 0px 0px 8px black; */
 	box-shadow: 3px 3px 7px black;
 }
-h3{
+.service-h3{
 	text-align: center;
 }
 /* ending section services */
 /* start section projects */
-.images{
-	background-color: var(--yellow);
-}
-.text{
+.project-caption{
 	text-align: center;
-}
-.center{
-	justify-content: center;
-}
-.block-width-height{
-	width: 500px;
-	height: 250px;
 }
 /* ending section projects */
 /* start section about me */
@@ -189,12 +182,16 @@ h3{
 	height: 10px;
 	padding: 0px 10px;
 }
-.contact-icon{
-	font-size: 20px;
-	margin-right: 40px;
-}
+
 .align-items-center{
 	align-items: center;
+}
+/* td .margin-bottom-30{
+	border-spacing: 30px;
+} */
+iframe{
+	padding-top: 30px;
+	width: 400px;
 }
 .width-300-height-30{
 	width: 300px;
@@ -207,14 +204,14 @@ textarea{
 ::placeholder{
 	color: black;
 }
-iframe{
-	width: 300px;
-	height: 500px;
-}
 /* ending section contact */
 /* start section footer */
 footer{
 	padding: 10px 0px;
+}
+.contact-icon{
+	font-size: 20px;
+	margin-right: 40px;
 }
 .contact-icon:hover{
 	color: white;
