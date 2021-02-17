@@ -1,0 +1,470 @@
+$yellow: rgb(237, 184, 3);
+$whitebackground: rgb(241, 241, 241);
+$black: rgb(0, 0, 0);
+$fontsize: 18px;
+$full: 100%;
+
+@mixin display-flex {
+    display: flex;
+    justify-content: space-between;
+	flex-wrap: wrap;
+}
+@mixin border {
+    border: 3px solid $yellow;
+}
+@mixin picture {
+    background-image: url("../img/cover1.jpg");
+	background-attachment: fixed;
+	background-position: top left;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+@mixin icon-size{
+    text-align: center;
+    font-size: 3.125em;
+}
+@mixin center-align{
+    text-align: center;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+@font-face {
+	font-family: font-main;
+	src: url(../fonts/ProductSansRegular.ttf);
+}
+@font-face {
+	font-family: naslov;
+	src: url(../fonts/ProductSansBoldItalic.ttf);
+}
+body, html, #cover{
+    height: $full;
+}
+h1, h2{
+    font-family: naslov;
+}
+body{
+    font: {
+        size: $fontsize;
+        family: font-main;
+    }
+    background-color:  $whitebackground;
+    line-height: 30px;
+}
+.text-align-center, #hero, h2, .service-icon, figcaption, #social{
+    @include center-align;
+}
+.yellow{
+    background-color: $yellow;
+}
+a{  
+    color: $black;
+    text-decoration: none;
+	text-transform: uppercase;
+}
+ul{
+    list-style-type: none;
+}
+.central-positioning{
+    width: 80%;
+	margin: 0px auto;
+}
+
+.d-flex{
+    @include display-flex;
+}
+.padding-top-40{
+	padding-top: 34.5px ;
+}
+ header{
+    width: $full;
+    background-color: $whitebackground;
+    border-bottom: 3px solid $yellow;
+    position: fixed;
+    z-index: 1;
+}
+nav{
+    li{
+        margin: 0px 20px;
+        background-image: linear-gradient($black, $black);
+        background-size: 0 2px, auto;
+	    background-repeat: no-repeat;
+	    background-position: center bottom;
+	    transition: all .4s ease-out;
+        &:hover{
+            background-size: 100% 2px;
+        }
+
+    }
+}
+#hamburger{
+    display: none;
+    width: $full;
+	padding: 10px 0px;
+    div{
+        width: 35px;
+	    height: 4px;
+	    background-color: $whitebackground;
+	    margin: 5px auto;
+    }
+}
+// start section main 
+#cover {
+	@include picture;
+    position: relative;
+}
+#hero{
+    font-size: 38px;
+	width: 44%;
+	right: 200px;
+	bottom: 30%;
+	position: absolute;
+	margin-left: auto;
+	margin-right: auto;
+    h1{
+        margin-bottom: 20px;
+        line-height: initial;
+    }
+}
+button{
+    background-color: $black;
+    width: 150px;
+    height: 40px;
+    cursor: pointer;
+    border-radius: 30px;
+    color: $whitebackground;
+    border: 1px solid $black;
+    &:hover{
+        background-color: inherit;
+        color: $black;
+        border: none;
+        transition: ease-in 0.5s;
+        font-weight: bold;
+    }
+}
+// ending section main
+// start section skills
+.padding-top{
+	padding-top: 40px;
+}
+.padding-top-bottom{
+	padding: 30px 0px;
+}
+.padding-bottom{
+	padding-bottom: 90px;
+}
+.space-evenly{
+    @extend .d-flex;
+    justify-content: space-evenly;
+}
+h2{
+	font-size: 30px;
+}
+.skills-icon{
+    animation: rotation 5s infinite linear;
+    @include icon-size;
+}
+.info{
+    width: 30%;
+    padding: 20px;
+	margin-bottom: 50px;
+	background-color: $yellow; 
+    text-align: justify;
+    @include border;
+    h3{
+        text-align: left;
+    }
+    &:hover{
+        transition: ease-in 0.5s;
+        @include border;
+        background-color: inherit;
+    }
+}
+@keyframes rotation{
+	from{
+		transform: rotateY(0deg);
+	}
+	to{
+		transform: rotateY(360deg);
+	}
+}
+// ending section skills
+// start section sevices
+#bg-cover{
+    // @include picture;
+    background-color: $yellow;
+}
+ .service-icon{
+     width: 30%;
+    padding: 5% 0px;
+    p{  
+        width: $full;
+        margin-top: 20px;
+    }
+}
+
+// ending section services
+// start section projects
+
+// ending section projects
+// start section  about me 
+.w-40{
+    width: 40%;
+}
+#social{
+    flex-direction: column;
+    align-items: center;
+}
+// ending section about me
+// start section contact 
+.jc-center{
+    justify-content: center;
+}
+.text-align-center{
+    p{
+        color:rgb(241, 241, 241);
+    }
+    div{
+        padding-bottom: 40px;
+        
+        a{
+            color:rgb(241, 241, 241);
+            margin-right: 10px;
+        }
+        
+    }
+}
+#outline{
+    @include border;
+}
+table{
+    width: -webkit-fill-available;
+    input{
+        border: none;
+        border-bottom: 3px solid $black;
+        background-color: $whitebackground;
+        font-family: font-main;
+        margin-top: 40px;
+        width: 80%;
+        text-align: center;
+    }
+    button{
+        margin-top: 40px;
+    }
+}
+.width-300-height-30{
+	width: 400px;
+	height: 30px;
+}
+::placeholder{
+	color: $yellow;
+    font-size: 18px;
+}
+// ending section contact
+// start section  footer
+#webicons{
+    width: $full;
+    text-align: center;
+    font-size: 12px;
+    background-color: $black;
+    a{
+        color: $whitebackground;
+    }
+    
+}
+// ending section footer
+// start responsive adjustments
+
+@media screen and (max-width: 1296px){
+    #hero{
+        width: 54%;
+        font-size: 35px;
+    }
+    .project-image{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 1156px){
+    #hero{
+        width: 60%;
+    }
+    .project-image{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 1045px){
+    #hero{
+        width: 65%;
+    }
+    .project-image{
+        width: 500px;
+    }
+   #first-caption{
+       margin-bottom: 50px;
+    }
+    .space-around{
+        justify-content: space-around;
+    }
+    
+}
+@media screen and (max-width:1025px){
+    #hero{
+        width: 61%;
+        padding-right: 11%;
+        font-size: 3.2vw;
+    }
+    button{
+        width: 125px;
+        height: 35px;
+    }
+    .circle{
+        padding: 40px;
+        font-size: 40px;
+    }
+}
+@media screen and (max-width: 800px)
+{
+    .space-between{
+        justify-content: space-around;
+    }
+    header .central-positioning{
+        flex-direction: column;
+        width: 100%;
+    }
+    /* nav */
+    .padding-top-40{
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    #list{
+        display: none;
+    }
+    #hamburger{
+        display: initial;
+    }
+    nav{
+        background-color: black;
+        width: 100%;
+    }
+    nav ul li a{
+        color: white;
+        border-left: 2px solid white;
+        padding-left: 3px;
+    }
+    nav:hover #list{
+        display: block;
+    }
+    
+    .ai-items{
+        align-items: center;
+    }
+    button{
+        width: 95px;
+        height: 30px;
+    }
+    button:hover{
+       background-color: black;
+       color: white;
+    }
+    /* skills */
+    h2{
+        padding: 0px;
+        font-size: 25px;
+    }
+    .padding-top-bottom {
+        padding: 20px 0px;
+    }
+    .info{
+        width: 100%;
+    }
+    .service-icon{
+        width: 55%;
+    }
+    .w-40{
+        width: 80%;
+        @include border;
+    }
+}
+@media screen and (max-width: 770px){
+   
+    #logo img{
+        width: 60px
+    }
+    #hero{
+        width:70%;
+        /* padding-right: 10%; */
+        font-size: 30px;
+        /* padding-top: 20%; */
+        right: 20px;
+        top:50%;
+    }
+    /* header{
+        text-align: center;
+    } */
+}
+
+@media screen and (max-width: 740px){
+    .project-image{
+        width: 450px;
+    }
+}
+@media screen and (max-width: 660px){
+    header nav ul li{
+        margin: 0px 15px;
+    }
+    button{
+        width: 80px;
+        height: 25px;
+    }
+}
+@media screen and (max-width: 590px){
+    #cover{
+        background-position: 15%;
+    }
+    .project-image{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 550px){
+    .project-image{
+        width: 350px;
+    }
+}
+@media screen and (max-width:480px){
+    .project-image{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 426px){
+    .padding-bottom{
+        padding-bottom: 65px;
+    }
+    .service-icon{
+        width: 100%;
+    }
+    .w-40{
+        width: 100%;
+    }
+}
+@media screen and (max-width: 380px){
+   
+    header nav ul li a{
+        font-size: 10px;
+    }
+    #hero{
+        bottom: 50px;
+    }
+}
+@media screen and (max-width:321px){
+    #hero{
+        top:35%;
+    }
+    .contact-icon{
+        margin-right: 30px;
+    }
+    .justify-320px{
+        align-items: center;
+    }
+}

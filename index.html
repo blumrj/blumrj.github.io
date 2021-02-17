@@ -12,7 +12,7 @@
             <!-- normalan -->
             <link href="css/style.css" type="text/css" rel="stylesheet"/>
             <!-- responsive-->
-                 <link rel="stylesheet" href="css/responsive.css" type="text/css"/> 
+                 <!-- <link rel="stylesheet" href="css/responsive.css" type="text/css"/>  -->
 </head>
 <body>
     <!-- start section navigation -->
@@ -40,8 +40,8 @@
         </header>
         <!-- ending section navigation -->
         <!-- start section main -->
-            <section id="cover" class=" d-flex flex-end">
-                <div id="hero">
+            <section  id="cover" class="d-flex flex-end">
+                <div id="hero" >
                     <h1>Creating websites according to your wishes.</h1>
                     <a href="#1"><button>More</button></a>
                 </div>
@@ -50,13 +50,13 @@
         <!-- start section skills -->
         <div id="1" class="padding-bottom">
             <h2 class="padding-top-bottom">Skills</h2>
-            <div class="central-positioning d-flex space-between padding-top">
-                <div class="info">
+            <div class="central-positioning d-flex space-evenly padding-top">
+                <div class="info" >
                     <i class="fab fa-html5 skills-icon"></i>
                         <h3 class="padding-top-bottom">HTML</h3>
-                        <p>HyperText Markup Language (HTML)
+                        <p>HyperText Markup Language
                         is the set of markup symbols or codes inserted into a file intended for display on the Internet. 
-                        The markup tells web browsers how to display a web page's words and images.</p>
+                        It tells web browsers how to display a web page's words and images.</p>
                 </div>
                 <div class="info">
                     <i class="fab fa-css3-alt skills-icon"></i>
@@ -73,36 +73,50 @@
                         It was originally developed by Netscape as a means to add dynamic and 
                         interactive elements to websites.</p>
                 </div>
+                <div class="info">
+                    <i class="fab fa-python skills-icon"></i>
+                    <h3 class="padding-top-bottom">Python</h3>
+                    <p>Python is a general-purpose coding language.
+                         Unlike HTML, CSS, and JavaScript, it can be used for other types
+                          of programming and software development besides web development.</p>
+                </div>
             </div>
         </div>
         <!-- ending section skills -->
         <!-- start section services -->
-        <div class="yellow padding-bottom" id="2">
-            <h2 class="padding-top-bottom">Services</h2>
-            <div class="central-positioning d-flex space-between">
-                <div class="">
-                    <figure>
-                        <i class="fas fa-paint-brush circle color-mustard"></i>
-                      <figcaption>
-                          <h3 class="service-h3">Web Design</h3>
-                      </figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <figure>
-                        <i class="fas fa-layer-group circle color-mustard"></i>
-                      <figcaption>
-                          <h3 class="service-h3">Seo</h3>
-                      </figcaption>
-                    </figure>
-                </div>
-                <div>
-                    <figure>
-                        <i class="fas fa-magic circle color-mustard"></i>
-                      <figcaption>
-                          <h3 class="service-h3">Ui/Ux Design</h3>
-                      </figcaption>
-                    </figure>
+        <div class="  " id="2">
+            <div id="bg-cover">
+                <div class="padding-bottom">
+                    <h2 class="padding-top-bottom">Services</h2>
+                    <div class="central-positioning d-flex space-between">
+                        <div class="service-icon">
+                            <figure>
+                                <img src="img/web.png" alt="Web Design">
+                            <figcaption>
+                                <h3 class="service-h3">Web Design</h3>
+                                <p>Refers to the design of websites that are displayed on the internet.</p>
+                            </figcaption>
+                            </figure>
+                        </div>
+                        <div class="service-icon">
+                            <figure>
+                                <img src="img/seo.png" alt="Search Engine Optimization">
+                            <figcaption>
+                                <h3 class="service-h3">Search Engine Optimization</h3>
+                                <p>The process of improving your site to increase its visibility for relevant searches.</p>
+                            </figcaption>
+                            </figure>
+                        </div>
+                        <div class="service-icon">
+                            <figure>
+                                <img src="img/responsive.png" alt="Responsive Design">
+                            <figcaption>
+                                <h3 class="service-h3">Responsive Design</h3>
+                                <p> Makes web pages render well on a variety of devices and window or screen sizes. </p>
+                            </figcaption>
+                            </figure>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,14 +126,14 @@
             <h2 class="padding-top-bottom">Projects</h2>
             <div class="central-positioning d-flex space-between space-around padding-top">
                 <figure >
-                    <a href="https://alexandarsgarage.000webhostapp.com/index.html" target="_blank"><img  class="project-image" src="img/ag.jpg" alt="Project 1"/></a>
+                    <img  class="project-image" src="img/ag.jpg" alt="Alexsndar's Garage"/>
                     <figcaption class="project-caption" id="first-caption">
                         <h3>Alexsndar's garage</h3>
                         <p>Static website - HTML - CSS</p>
                     </figcaption>
                 </figure>
                 <figure>
-                    <img class="project-image" src="img/ag.jpg" alt="Project 1"/>
+                    <img class="project-image" src="img/jf.jpg" alt="Portfolio"/>
                     <figcaption class="project-caption">
                         <h3>Client Portfolio</h3>
                         <p>Static website - HTML - CSS - JavaScript</p>
@@ -129,7 +143,7 @@
         </div>
         <!-- ending section projects -->
         <!-- start section about me -->
-        <div id="4" class="yellow padding-bottom">
+        <div id="4" class=" padding-bottom">
             <h2 class="padding-top-bottom">About Me</h2>
             <div class="central-positioning d-flex space-between padding-top">
                 <div class="w-40"></div>
@@ -144,89 +158,41 @@
         <!-- ending section about me -->
         <!-- start section contact -->
         <div id="5" class="padding-bottom">
-            <h2 class="padding-top-bottom">Contact Me</h2>
-            <div class="central-positioning d-flex space-between padding-top">
-                <div class="w-40">
+            <h2>Contact</h2>
+            <div class=" central-positioning d-flex jc-center padding-top">
+                <div class="yellow w-40 text-align-center">
+                    <h3 class="padding-top white">Address</h3>
+                    <p>Kopernikova, Belgrade, Serbia</p>
+                    <h3 class="padding-top">Contact Me</h3>
+                    <p>+381 611234567</p>
+                    <h3 class="padding-top">General Support</h3>
+                    <p>marija.filipovic.61.20@ict.edu.rs</p>
+                    <h3 class="padding-top">Get In Touch</h3>
                     <div>
-                        <table>
-                            <tbody>
-                                <tr class="yellow height-30">
-                                    <td>
-                                        061 1234567
-                                    </td>
-                                </tr>
-                                <tr class="yellow height-30">
-                                    <td>
-                                        Belgrade, Serbia
-                                    </td>
-                                </tr>
-                                <tr class="yellow">
-                                    <td class="margin-bottom-30">
-                                        marija.filipovic.61.20@ict.edu.rs
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m
-                                         12!1m3!1d2279.172458448405!2d20.480801546845147!3d44.8132
-                                        9615608306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1
-                                        s0x475a7a9609031735%3A0x4b2dd3d867d041a!2z0JfQtNGA0LDQstC60LA
-                                         g0KfQtdC70LDRgNCwIDE2LCDQkdC10L7Qs9GA0LDQtA!5e0!3m2!1ssr!2srs
-                                        !4v1613048191895!5m2!1ssr!2srs" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe> 
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div>
-                             
+                        <a href="https://www.facebook.com/filipovic.marija.12" target="_blank"><i class="fab fa-facebook-f contact-icon"></i></a>
+                        <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter contact-icon"></i></a>
+                        <a href="https://dribbble.com/" target="_blank"><i class="fas fa-basketball-ball contact-icon"></i></a>
+                        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in contact-icon"></i></a>
+                        <a href="https://www.behance.net/" target="_blank"><i class="fab fa-behance contact-icon"></i></a>
                     </div>
                 </div>
-                <div class="w-40">
-                    <form action="#" method="get">
-                        <table>
-                            <thead class="yellow">
-                                <tr>
-                                    <th>SEND ME A MESSAGE</th>
-                                </tr>
-                            </thead>
+                <div id="outline"  class="w-40 text-align-center">
+                    <h2 class="padding-top-bottom">Send Me A Message</h2>
+                    <form action="">
+                        <table >
                             <tbody>
                                 <tr>
-                                    <td>
-                                        <label for="firstname">First name:</label>
-                                        <span class="required">*</span> <br/>
-                                        <input  class="yellow width-300-height-30" type="text" id="firstname" name="firstname" placeholder="Type here your First name"/>
-                                    </td>
+                                    <td><input type="text" id="first-name" name="first-name" placeholder="Type your name here"/></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <label for="lastname">Last name:</label>
-                                        <span class="required">*</span> <br/>
-                                        <input class="yellow width-300-height-30" type="text" id="lastname" name="lastname" placeholder="Type here your Last name"/>
-                                    </td>
+                                    <td><input type="email" id="e-mail" name="e-mail" placeholder="Type your e-mail here"/></td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        <label for="mail">E-mail:</label>
-                                        <span class="required">*</span> <br/>
-                                        <input class="yellow width-300-height-30" type="text" id="mail" name="mail" placeholder="Type here your e-mail adress"/>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <label for="message">Leave a message:</label>
-                                        <span class="required">*</span> <br/>
-                                        <textarea class="yellow" id="message" name="message" placeholder="Type here your message"></textarea>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <button type="submit" name="btn" class="btn">Send</button>
-                                    </td>
+                                    <td><input name="message" id="message" placeholder="Message Me" /> <br> <button>Send</button></td>
                                 </tr>
                             </tbody>
-                        </table>
-                    </form> 
+                        </table> 
+                    </form>
                 </div>
             </div>
         </div>
@@ -234,18 +200,16 @@
         <!-- start section footer -->
        <footer class="yellow d-flex align-items-center">
             <div class="central-positioning d-flex space-between">
-                <div id="social" class="d-flex justify-320px">
-                    <a href="https://www.facebook.com/filipovic.marija.12" target="_blank"><i class="fab fa-facebook-f contact-icon"></i></a>
-                    <a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter contact-icon"></i></a>
-                    <a href="https://dribbble.com/" target="_blank"><i class="fas fa-basketball-ball contact-icon"></i></a>
-                    <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in contact-icon"></i></a>
-                    <a href="https://www.behance.net/" target="_blank"><i class="fab fa-behance contact-icon"></i></a>
-                </div>
+               
                 <div id="copy">
                     <p>Copyright &copy; Marija Filipovic 2020.</p>
                 </div>
             </div>
        </footer>
+       <div id="webicons">
+        <a href="https://icons8.com" target="_blank">Icons by Icons8</a>
+       </div>
         <!-- ending section footer -->
 </body>
 </html>
+                    
