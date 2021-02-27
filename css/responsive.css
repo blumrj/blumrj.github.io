@@ -98,27 +98,20 @@
         padding: 20px 0px;
     }
     .info{
-        width: 85%;
-        align-items: center;
-        padding: 20px 0px 0px;
+        width: 100%;
     }
-    .circle{
-        padding: 30px;
-        font-size: 35px;
-        margin: 40px 0px 20px;
+    .service-icon{
+        width: 55%;
     }
-    .contact-icon:hover{
-        color: black;
-        opacity: 1;
+    .w-40{
+        width: 80%;
+        /* @include border; */
     }
 }
 @media screen and (max-width: 770px){
    
     #logo img{
         width: 60px
-    }
-    #cover{
-        height: calc(100% - 120px);
     }
     #hero{
         width:70%;
@@ -128,29 +121,21 @@
         right: 20px;
         top:50%;
     }
-    /* header{
-        text-align: center;
-    } */
 }
 
 @media screen and (max-width: 740px){
-    .circle{
-        margin: 40px 101px 10px;
-        padding: 40px;
-        font-size: 40px;
-    }
     .project-image{
         width: 450px;
     }
 }
 @media screen and (max-width: 660px){
-    header nav ul li{
+  header nav ul li{
         margin: 0px 15px;
-    }
-    button{
+   }
+   button{
         width: 80px;
-        height: 25px;
-    }
+      height: 25px;
+     }
 }
 @media screen and (max-width: 590px){
     #cover{
@@ -167,15 +152,18 @@
 }
 @media screen and (max-width:480px){
     .project-image{
-        width: 300px;
+        width: 100%;
     }
 }
 @media screen and (max-width: 426px){
     .padding-bottom{
         padding-bottom: 65px;
     }
-    .circle{
-        margin: 40px 30px 10px;
+    .service-icon{
+        width: 100%;
+    }
+    .w-40{
+        width: 100%;
     }
 }
 @media screen and (max-width: 380px){
@@ -186,26 +174,15 @@
     #hero{
         bottom: 50px;
     }
-    .project-image{
-        width: 250px;
-    }
-}@media screen and (max-width:321px){
+}
+@media screen and (max-width:321px){
     #hero{
         top:35%;
     }
-    #cover{
-        background-position: 15% -55px;
-        height: calc(100% - 65px);
-    }
-    .circle{
-        margin: 20px;
-    }.contact-icon{
+    .contact-icon{
         margin-right: 30px;
     }
     .justify-320px{
         align-items: center;
-    }
-    .project-image{
-        width: 200px;
     }
 }
