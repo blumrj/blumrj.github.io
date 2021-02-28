@@ -23,7 +23,6 @@ h1, h2 {
 }
 
 body {
-  font-size: 16px;
   font-family: font-main;
   background-color: #f1f1f1;
   line-height: 30px;
@@ -38,7 +37,7 @@ body {
 }
 
 a {
-  color: black;
+  color: #080808;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -77,8 +76,8 @@ header {
 
 nav li {
   margin: 0px 20px;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(black));
-  background-image: linear-gradient(black, black);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#080808), to(#080808));
+  background-image: linear-gradient(#080808, #080808);
   background-size: 0 2px, auto;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -114,7 +113,7 @@ nav li:hover {
 
 #hero {
   font-size: 38px;
-  width: 44%;
+  width: 48%;
   right: 200px;
   bottom: 30%;
   position: absolute;
@@ -128,18 +127,18 @@ nav li:hover {
 }
 
 button {
-  background-color: black;
+  background-color: #080808;
   width: 150px;
   height: 40px;
   cursor: pointer;
   border-radius: 30px;
   color: #f1f1f1;
-  border: 1px solid black;
+  border: 1px solid #080808;
 }
 
 button:hover {
   background-color: inherit;
-  color: black;
+  color: #080808;
   border: none;
   -webkit-transition: ease-in 0.5s;
   transition: ease-in 0.5s;
@@ -226,13 +225,12 @@ h2 {
   padding: 5% 0px;
 }
 
-.service-icon p {
-  width: 100%;
-  margin-top: 20px;
-}
-
 .w-40 {
   width: 40%;
+}
+
+.w-40 #text-p {
+  text-align: justify;
 }
 
 #social {
@@ -265,57 +263,73 @@ h2 {
 }
 
 #outline {
-  border: 3px solid #edb803;
+  background-color: #080808;
 }
 
-table {
+#outline h2 {
+  color: #edb803;
+}
+
+#outline table {
   width: -webkit-fill-available;
 }
 
-table input {
+#outline table input {
+  color: white;
   border: none;
-  border-bottom: 3px solid black;
-  background-color: #f1f1f1;
-  font-family: font-main;
+  border-bottom: 1px solid white;
+  background-color: #080808;
   margin-top: 40px;
   width: 80%;
   text-align: center;
 }
 
-table button {
+#outline table ::-webkit-input-placeholder {
+  color: white;
+  background-color: #080808;
+  padding-bottom: 5px;
+  font-family: font-main;
+  font-size: 16px;
+}
+
+#outline table :-ms-input-placeholder {
+  color: white;
+  background-color: #080808;
+  padding-bottom: 5px;
+  font-family: font-main;
+  font-size: 16px;
+}
+
+#outline table ::-ms-input-placeholder {
+  color: white;
+  background-color: #080808;
+  padding-bottom: 5px;
+  font-family: font-main;
+  font-size: 16px;
+}
+
+#outline table ::placeholder {
+  color: white;
+  background-color: #080808;
+  padding-bottom: 5px;
+  font-family: font-main;
+  font-size: 16px;
+}
+
+#outline table button {
   margin-top: 40px;
+  background-color: #edb803;
+  color: #080808;
 }
 
-.width-300-height-30 {
-  width: 400px;
-  height: 30px;
-}
-
-::-webkit-input-placeholder {
-  color: #edb803;
-  font-size: 18px;
-}
-
-:-ms-input-placeholder {
-  color: #edb803;
-  font-size: 18px;
-}
-
-::-ms-input-placeholder {
-  color: #edb803;
-  font-size: 18px;
-}
-
-::placeholder {
-  color: #edb803;
-  font-size: 18px;
+#copy, #webicons {
+  width: 100%;
+  text-align: center;
 }
 
 #webicons {
-  width: 100%;
-  text-align: center;
   font-size: 12px;
-  background-color: black;
+  background-color: #080808;
 }
 
 #webicons a {

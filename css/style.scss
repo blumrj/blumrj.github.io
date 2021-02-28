@@ -1,7 +1,6 @@
 $yellow: rgb(237, 184, 3);
 $whitebackground: rgb(241, 241, 241);
-$black: rgb(0, 0, 0);
-$fontsize: 16px;
+$black: rgb(8, 8, 8);
 $full: 100%;
 
 @mixin display-flex {
@@ -47,7 +46,6 @@ h1, h2{
 }
 body{
     font: {
-        size: $fontsize;
         family: font-main;
     }
     background-color:  $whitebackground;
@@ -116,8 +114,9 @@ nav{
     position: relative;
 }
 #hero{
+    // background-color: royalblue;
     font-size: 38px;
-	width: 44%;
+	width: 48%;
 	right: 200px;
 	bottom: 30%;
 	position: absolute;
@@ -193,16 +192,11 @@ h2{
 // ending section skills
 // start section sevices
 #bg-cover{
-    // @include picture;
     background-color: $yellow;
 }
  .service-icon{
      width: 30%;
     padding: 5% 0px;
-    p{  
-        width: $full;
-        margin-top: 20px;
-    }
 }
 
 // ending section services
@@ -212,6 +206,9 @@ h2{
 // start section  about me 
 .w-40{
     width: 40%;
+    #text-p{
+        text-align: justify;
+    }
 }
 #social{
     flex-direction: column;
@@ -237,36 +234,45 @@ h2{
     }
 }
 #outline{
-    @include border;
-}
-table{
-    width: -webkit-fill-available;
-    input{
-        border: none;
-        border-bottom: 3px solid $black;
-        background-color: $whitebackground;
-        font-family: font-main;
-        margin-top: 40px;
-        width: 80%;
-        text-align: center;
+    background-color: $black;
+    h2{
+        color: $yellow;
     }
-    button{
-        margin-top: 40px;
+    table{
+        width: -webkit-fill-available;
+        input{
+            color: white;
+            border: none;
+            border-bottom: 1px solid white;
+            background-color: $black;
+            margin-top: 40px;
+            width: 80%;
+            text-align: center;
+        }
+        ::placeholder{
+            color: white;
+            background-color: $black;
+            padding-bottom: 5px;
+            font: {
+                family: font-main;
+                size: 16px;
+            }
+        }
+        button{
+            margin-top: 40px;
+            background-color: $yellow;
+            color: $black;
+        }
     }
-}
-.width-300-height-30{
-	width: 400px;
-	height: 30px;
-}
-::placeholder{
-	color: $yellow;
-    font-size: 18px;
 }
 // ending section contact
 // start section  footer
-#webicons{
+#copy, #webicons{
     width: $full;
     text-align: center;
+    
+}
+#webicons{
     font-size: 12px;
     background-color: $black;
     a{
@@ -275,4 +281,3 @@ table{
     
 }
 // ending section footer
-// start responsive adjustments
