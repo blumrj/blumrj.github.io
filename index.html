@@ -5,14 +5,14 @@
             <meta charset="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
             <meta name="keywords" content="website design, web developers belgrade, web design, web developing belgrade"/>
-            <meta name="description" content=""/>
+            <meta name="description" content="Web Developer from Belgrade, Serbia. Welcome to my portfolio."/>
             <link rel="shortcut icon" href="img/logo.ico"/>
             <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" 
             integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
             <!-- normalan -->
             <link href="css/style.css" type="text/css" rel="stylesheet"/>
             <!-- responsive-->
-                 <link rel="stylesheet" href="css/responsive.css" type="text/css"/> 
+                 <!-- <link rel="stylesheet" href="css/responsive.css" type="text/css"/>  -->
 </head>
 <body>
     <!-- start section navigation -->
@@ -42,7 +42,7 @@
         <!-- start section main -->
             <section  id="cover" class="d-flex flex-end">
                 <div id="hero" >
-                    <h1>Creating websites according to your wishes.</h1>
+                    <h1>Creating websites <br> according to your wishes.</h1>
                     <a href="#1"><button>More</button></a>
                 </div>
             </section>
@@ -102,7 +102,7 @@
                             <figure>
                                 <img src="img/seo.png" alt="Search Engine Optimization">
                             <figcaption>
-                                <h3 class="service-h3">Search Engine Optimization</h3>
+                                <h3 class="service-h3">Seo</h3>
                                 <p>The process of improving your site to increase its visibility for relevant searches.</p>
                             </figcaption>
                             </figure>
@@ -125,15 +125,15 @@
         <div id="3" class="padding-bottom" >
             <h2 class="padding-top-bottom">Projects</h2>
             <div class="central-positioning d-flex space-between space-around padding-top">
-                <figure >
-                    <img  class="project-image" src="img/ag.jpg" alt="Alexsndar's Garage"/>
+                <figure class="pop-up">
+                    <a href="https://alexandarsgarage.000webhostapp.com/index.html" target="_blank"><img  class="project-image" src="img/ag.jpg" alt="Alexsndar's Garage"/></a>
                     <figcaption class="project-caption" id="first-caption">
                         <h3>Alexsndar's garage</h3>
                         <p>Static website - HTML - CSS</p>
                     </figcaption>
                 </figure>
-                <figure>
-                    <img class="project-image" src="img/jf.jpg" alt="Portfolio"/>
+                <figure class="pop-up">
+                    <a href="#3"><img class="project-image" src="img/jf.jpg" alt="Portfolio"/></a>
                     <figcaption class="project-caption">
                         <h3>Client Portfolio</h3>
                         <p>Static website - HTML - CSS - JavaScript</p>
@@ -146,10 +146,10 @@
         <div id="4" class=" padding-bottom">
             <h2 class="padding-top-bottom">About Me</h2>
             <div class="central-positioning d-flex space-between padding-top">
-                <div class="w-40"></div>
+                <div class="w-40 slika"></div>
                 <div class="w-40">
-                    <p id="text-p">Hi, I'm Marija Filipovic.
-                    A Serbian Web Developer,
+                    <p id="text-p">Hi, I'm Marija, 
+                    a Serbian Web Developer,
                     currently working as a freelancer. Some assets I bring is working well with others, being motivated, and responsible. 
                     Seeking a position in Web Developing will utilize these skills, and allow me to grow in my field of work. 
                  </p>
@@ -167,7 +167,7 @@
                     <h3 class="padding-top">Contact Me</h3>
                     <p>+381 611234567</p>
                     <h3 class="padding-top">General Support</h3>
-                    <p>marija.filipovic.61.20@ict.edu.rs</p>
+                    <p>marija.filipovic.61.20&commat;ict.edu.rs</p>
                     <h3 class="padding-top">Get In Touch</h3>
                     <div>
                         <a href="https://www.facebook.com/filipovic.marija.12" target="_blank"><i class="fab fa-facebook-f contact-icon"></i></a>
@@ -189,7 +189,7 @@
                                     <td><input type="email" id="e-mail" name="e-mail" placeholder="Type your e-mail here"/></td>
                                 </tr>
                                 <tr>
-                                    <td><input name="message" id="message" placeholder="Message Me" /> <br> <button>Send</button></td>
+                                    <td><input name="message" id="message" placeholder="Message Me" /> <br> <a href="#5"><button>Send</button></a></td>
                                 </tr>
                             </tbody>
                         </table> 
@@ -199,16 +199,19 @@
         </div>
         <!-- ending section contact -->
         <!-- start section footer -->
-       <footer class="yellow d-flex align-items-center">
-            <div class="central-positioning d-flex space-between">
+       <footer class="yellow">
+           <div class="central-positioning d-flex  space-around">
+                <div id="webicons" class="d-flex">
+                    <a href="css/style.scss" target="_blank"><p>SCSS</p></a>
+                    <a href="css/style.css" target="_blank"><p>CSS</p></a>
+                    <a href="sitemap.xml" target="_blank"><p>SITEMAP</p></a>
+                    <a href="https://icons8.com" target="_blank">Icons by Icons8</a>
+                </div>
                 <div id="copy">
-                    <p>Copyright &copy; Marija Filipovic 2020.</p>
+                    <p>Marija Filipovic 2021. All Rights Reserved.</p>
                 </div>
             </div>
        </footer>
-       <div id="webicons">
-        <a href="https://icons8.com" target="_blank">Icons by Icons8</a>
-       </div>
         <!-- ending section footer -->
 </body>
 </html>
