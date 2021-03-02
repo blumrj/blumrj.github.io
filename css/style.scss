@@ -369,6 +369,9 @@ h2{
     .space-between {
       justify-content: space-around;
     }
+    header{
+      border-bottom: none;
+    }
     header .central-positioning {
       flex-direction: column;
       width: 100%;

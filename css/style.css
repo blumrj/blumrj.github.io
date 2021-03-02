@@ -446,6 +446,9 @@ h2 {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+  header {
+    border-bottom: none;
+  }
   header .central-positioning {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
