@@ -1,528 +1,135 @@
-$yellow: rgb(237, 184, 3);
-$whitebackground: rgb(241, 241, 241);
-$black: rgb(8, 8, 8);
-$full: 100%;
-
-@mixin display-flex {
-    display: flex;
-    justify-content: space-between;
-	flex-wrap: wrap;
-}
-@mixin border {
-    border: 3px solid $yellow;
-}
-@mixin picture {
-    background-image: url("../img/cover1.jpg");
-	background-attachment: fixed;
-	background-position: top left;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-@mixin icon-size{
-    text-align: center;
-    font-size: 3.125em;
-}
-@mixin center-align{
-    text-align: center;
-}
+$brownbg: #d39667;
+$yellowfontwithbrownbg: #f4db7d;
+$orange: #f4793f;
+$orange2: #ee9855;
+$greenmain: #168758;
+$white: #e6e2dd;
+$black: #202020;
 *{
-    margin: 0px;
     padding: 0px;
+    margin: 0px;
     scroll-behavior: smooth;
 }
 @font-face {
-	font-family: font-main;
-	src: url(../fonts/ProductSansRegular.ttf);
+    font-family: futura-pt-heavy;
+    src: url(../fonts/FuturaPTHeavy.otf);
 }
 @font-face {
-	font-family: naslov;
-	src: url(../fonts/ProductSansBoldItalic.ttf);
+    font-family: logofont;
+    src: url(../fonts/coco-gothic.regular.ttf);
 }
-body, html, #cover{
-    height: $full;
+@font-face {
+    font-family: futura-pt;
+    src: url(../fonts/FuturaPTBook.otf);
 }
-h1, h2{
-    font-family: naslov;
+@font-face {
+    font-family: bogart-h1;
+    src: url(../fonts/Bogart-Black-trial.ttf);
 }
 body{
-    font: {
-        family: font-main;
-    }
-    background-color:  $whitebackground;
-    line-height: 30px;
+    overflow-x: hidden;
+    font-family: futura-pt !important;
+    background-color: #e6e2dd !important;
 }
-.text-align-center, #hero, h2, .service-icon, figcaption, #social{
-    @include center-align;
+.brown{
+    background-color: #a56c46 !important;
+}
+.green{
+    background-color: $greenmain !important;
+}
+.white{
+    color: $white !important;
 }
 .yellow{
-    background-color: $yellow;
+    color: $yellowfontwithbrownbg !important;
 }
-a{  
-    color: $black;
-    text-decoration: none;
-	text-transform: uppercase;
+.black{
+    background-color: $black !important;
 }
-ul{
-    list-style-type: none;
+.orange{
+    color: $orange !important;
 }
-.central-positioning{
-    width: 80%;
-	margin: 0px auto;
+.orange2{
+    color: $orange2 !important;
 }
-
-.d-flex{
-    @include display-flex;
+.hover{
+    &:hover{
+        color: $yellowfontwithbrownbg !important;
+    }
 }
-.padding-top-40{
-	padding-top: 34.5px ;
+.navbar-brand{
+    font-family: logofont;
+    font-size: 2rem !important;
 }
- header{
-    width: $full;
-    background-color: $whitebackground;
-    border-bottom: 3px solid $yellow;
-    position: fixed;
-    z-index: 1;
+.pt-10{
+    padding-top: 10%;
+}
+.pt-20{
+    padding-top: 20%;
 }
 nav{
-    li{
-        margin: 0px 20px;
-        background-image: linear-gradient($black, $black);
-        background-size: 0 2px, auto;
-	      background-repeat: no-repeat;
-	      background-position: center bottom;
-	      transition: all .4s ease-out;
-        &:hover{
-            background-size: 100% 2px;
-        }
-
+    font-family: futura-pt;
+    font-size: 1.5rem;
+    ul{
+        list-style-type: none;
     }
 }
-#hamburger{
-    display: none;
-    width: $full;
-	  padding: 10px 0px;
-    div{
-        width: 35px;
-	    height: 4px;
-	    background-color: $whitebackground;
-	    margin: 5px auto;
+h1{
+    font-family: bogart-h1;
+    color: $yellowfontwithbrownbg;
+    font-size: 3.5rem !important;
+}
+//stranica knjige
+#main{
+    h2,h3{
+        color: #00483c;
+        font-family: futura-pt-heavy !important;
+        text-transform: uppercase;
     }
 }
-// start section main 
-#cover {
-	@include picture;
-  position: relative;
+// stranica kontakt
+#h1color{
+    color: $greenmain !important;
 }
-#hero{
-    // background-color: royalblue;
-    font-size: 38px;
-	width: 48%;
-	right: 200px;
-	bottom: 30%;
-	position: absolute;
-	margin-left: auto;
-	margin-right: auto;
+.card{
+    max-width: 500px !important;
+    background-color: $white !important;
+    border: none !important;
+}
+.ta{
+    text-align: -webkit-center;
+}
+// media query
+@media screen and (max-width: 576px){
+    .figure-img{
+        max-width: 20% !important;
+    }
+    figure{
+        display: flex !important;
+    }
+}
+@media screen and (max-width: 426px){
     h1{
-      margin-bottom: 20px;
-      line-height: initial;
+        font-size: 2.5rem !important;
     }
-}
-button{
-    background-color: $black;
-    width: 150px;
-    height: 40px;
-    cursor: pointer;
-    border-radius: 30px;
-    color: $whitebackground;
-    border: 1px solid $black;
-    &:hover{
-        background-color: inherit;
-        color: $black;
-        border: none;
-        transition: ease-in 0.5s;
-        font-weight: bold;
+    h2{
+        font-size: 1.5rem !important;
     }
-}
-// ending section main
-// start section skills
-.padding-top{
-	padding-top: 40px;
-}
-.padding-top-bottom{
-	padding: 30px 0px;
-}
-.padding-bottom{
-	padding-bottom: 90px;
-}
-.space-evenly{
-  @extend .d-flex;
-  justify-content: space-evenly;
-}
-h2{
-	font-size: 30px;
-}
-.skills-icon{
-  animation: rotation 5s infinite linear;
-  @include icon-size;
-}
-.info{
-  width: 30%;
-  padding: 20px;
-	margin-bottom: 50px;
-	background-color: $yellow; 
-  text-align: justify;
-  @include border;
     h3{
-      text-align: left;
-  }
-  &:hover{
-    transition: ease-in 0.5s;
-    @include border;
-    background-color: inherit;
-  }
-}
-@keyframes rotation{
-	from{
-		transform: rotateY(0deg);
-	}
-	to{
-		transform: rotateY(360deg);
-	}
-}
-// ending section skills
-// start section sevices
-#bg-cover{
-  background-color: $yellow;
-}
- .service-icon{
-  width: 30%;
-  padding: 5% 0px;
-}
-
-// ending section services
-// start section projects
-.pop-up:hover{
-  transition: ease-in 0.5s;
-  opacity: 0.8;
-}
-// ending section projects
-// start section  about me 
-#aboutme{
-  text-align: -webkit-center;
-}
-.slika{
-  border: 4px solid $yellow;
-}
-#aboutmetext{
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-
-}
-#text-p{
-  margin-top: 3%;
-  width: 500px;
-  text-align: justify;
-}
-.w-40{
-  width: 40%;
-}
-#social{
-  flex-direction: column;
-  align-items: center;
-}
-// ending section about me
-// start section contact 
-.jc-center{
-  justify-content: center;
-}
-.text-align-center{
-  p{
-    color:rgb(241, 241, 241);
-  }
-  div{
-    padding-bottom: 40px;    
-    a{
-      color:rgb(241, 241, 241);
-      margin-right: 10px;
-      :hover{
-        color: $black;
-        transition: all .4s ease-out;
-      }
-    }    
-  }
-}
-#outline{
-  background-color: $black;
-  h2{
-    color: $yellow;
-    font-size: 25px;
-  }
-  table{
-    width: -webkit-fill-available;
-    input{
-      color: white;
-      border: none;
-      border-bottom: 1px solid white;
-      background-color: $black;
-      margin-top: 40px;
-      width: 80%;
-      text-align: center;
+        font-size: 1.2rem !important;
     }
-    ::placeholder{
-      color: $whitebackground;
-      background-color: $black;
-      padding-bottom: 5px;
-      font: {
-        family: font-main;
-        size: 16px;
-      }
-    }
-    button{
-      margin-top: 40px;
-      background-color: $yellow;
-      color: $black;
-    }
-  }
-}
-// ending section contact
-// start section  footer
-#copy, #webicons{
-  width: 45%;
-}
-#copy{
-  text-align: right;
-}
-#webicons{
-  justify-content: left;
-  font-size: 12px;
-  a{
-    margin-right: 5%;
-    &:hover{
-      color: $whitebackground;
-      transition: all .4s ease-out;
+    .figure-img{
+        max-width: 25% !important;
     }
    
-  }  
 }
-// ending section footer
-// responsive 
-@media screen and (max-width: 1296px) {
-    #hero {
-      width: 54%;
-      font-size: 35px;
+@media screen and (max-width: 376px){
+    .figure-img{
+        max-width: 30% !important;
     }
-    .info {
-      width: 37%;
+}
+@media screen and (max-width: 321px){
+    .figure-img{
+        max-width: 35% !important;
     }
-    .project-image, #text-p {
-      width: 400px;
-    }
-  }
-  @media screen and (max-width: 1156px) {
-    #hero {
-      width: 60%;
-      right: 150px;
-    }
-    .project-image, #text-p {
-      width: 350px;
-    }
-  }
-  @media screen and (max-width: 1045px) {
-    #hero {
-      width: 65%;
-      right: 130px;
-    }
-    .project-image, #text-p {
-      width: 500px;
-    }
-    #first-caption {
-      margin-bottom: 50px;
-    }
-    .space-around {
-      justify-content: space-around;
-    }
-    #aboutme{
-      justify-content: center;
-      button{
-        margin-top: 5%;
-      }
-    }
-  }
-  @media screen and (max-width: 1025px) {
-    #hero {
-      width: 60%;
-      font-size: 32px;
-    }
-    button {
-      width: 125px;
-      height: 35px;
-    }
-  }
-  @media screen and (max-width: 986px) {
-    #hero, .info {
-      width: 65%;
-    }
-  }
-  @media screen and (max-width: 885px) {
-    #hero {
-      width: 70%;
-      right: 70px;
-    }
-  }
-  @media screen and (max-width: 820px) {
-    #hero {
-      width: 77%;
-      right: 50px;
-      bottom: 10%;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    #logo img {
-      width: 60px;
-    }
-    .space-between {
-      justify-content: space-around;
-    }
-    header{
-      border-bottom: none;
-    }
-    header .central-positioning {
-      flex-direction: column;
-      width: 100%;
-    }
-    .padding-top-40 {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-    #list {
-      display: none;
-    }
-    #hamburger {
-      display: initial;
-    }
-    nav {
-      background-color: $black;
-      width: 100%;
-      ul li{
-        border-bottom: $yellow 0.5px solid;
-        padding-top: 20px;
-        text-align: center;
-      }
-      ul li a {
-        color: $whitebackground;    
-      }
-      &:hover #list {
-        display: block;
-      }
-    }
-    .ai-items {
-      align-items: center;
-    }
-    button {
-      width: 95px;
-      height: 30px;
-      margin-bottom: 40px;
-      &:hover {
-        background-color: $black;
-        color: $whitebackground;
-      }
-    } 
-    h2 {
-      padding: 0px;
-      font-size: 25px;
-    }
-    .padding-top-bottom {
-      padding: 20px 0px;
-    }
-    .service-icon {
-      width: 55%;
-    }
-    .w-40 {
-      width: 80%;
-    }
-    #copy, #webicons{
-      width: $full;
-    }
-    #copy{
-      text-align: center;
-      font-size: 14px;
-    }
-    #webicons{
-      justify-content: space-around;
-      font-size: 12px;
-      a{
-      margin-right: 0px;
-      }
-    } 
-  }
-  @media screen and (max-width: 750px) {
-    #hero {
-      width: 85%;
-    }
-    .project-image, #text-p {
-      width: 450px;
-    }
-  }
-  @media screen and (max-width: 680px) {
-    #hero {
-      width: 95%;
-      right: 25px;
-      font-size: 27px;
-    }
-    button {
-      width: 80px;
-      height: 25px;
-    }
-  }
-  @media screen and (max-width: 620px) {
-    #cover {
-      background-position: 15%;
-    }
-    .project-image, #text-p {
-      width: 400px;
-    }
-  }
-  @media screen and (max-width: 520px) {
-    #hero {
-      width: 100%;
-      right: 0px;
-    }
-    .project-image, #text-p {
-      width: 100%;
-    }
-  }
-  @media screen and (max-width: 463px) {
-    #hero {
-      width: 85%;
-      right: 35px;
-      font-size: 25px;
-      bottom: 5%;
-    }
-  }
-  @media screen and (max-width: 426px) {
-    .padding-bottom {
-      padding-bottom: 65px;
-    }
-    .service-icon, .w-40 {
-      width: 100%;
-    }
-    .info {
-      width: 100%;
-      &:hover {
-        pointer-events: none;
-      }
-    }
-  }
-  @media screen and (max-width: 380px) {
-    #hero{
-      width: 100%;
-      right: 0px;
-    }
-    header nav ul li a {
-      font-size: 10px;
-    }
-    #copy{
-      font-size: 12px;
-    }
-  }
+}
