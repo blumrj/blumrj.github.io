@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+	<channel>
+		<title>Alexandar's garage home page</title>
+		<link>https://alexandarsgarage.000webhostapp.com/index.html</link>
+		<description>Budite u toku sa najnovijim vestima!</description>
+		<item>
+			<title>Preporučujemo!</title>
+			<link>https://alexandarsgarage.000webhostapp.com/index.html</link>
+			<description>Pogledajte najprodavanije motore 2020. godine</description>
+		</item>
+		<item>
+			<title>Da li ste tim Ipone ili Motul?</title>
+			<link>https://alexandarsgarage.000webhostapp.com/index.html</link>
+			<description>Dva najveća svetska proizvođača na tržištu u kategoriji motornog ulja</description>
+		</item>
+		<item>
+			<title>Moto land nas sprema za zimu!</title>
+			<link>https://alexandarsgarage.000webhostapp.com/index.html</link>
+			<description>Pogledajte najnoviju kolekciju za zimsku moto sezonu 2020/2021</description>
+		</item>
+	</channel>
+</rss>
