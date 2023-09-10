@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "title": "Zest",
+        "alt": "zest",
+        "img": "zest.png",
+        "description": "A restaurant website",
+        "link": "https://blumrj.github.io/zest/#1",
+        "technologies": ["HTML", "CSS", "JavaScript"],
+        "isResponsive": true
+    },
+    {
+        "id": 2,
+        "title": "Bike Garage",
+        "alt": "bikeGarage",
+        "img": "garage.jpg",
+        "description": "Bike garage website",
+        "link": "https://blumrj.github.io/garage/",
+        "technologies": ["HTML", "CSS"],
+        "isResponsive": false
+    },
+    {
+        "id": 3,
+        "title": "Bookwise",
+        "alt": "bookwise",
+        "img": "randomQuoteGenerator.jpg",
+        "description": "Online bookstore",
+        "link": "https://blumrj.github.io/random-quotes/",
+        "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        "isResponsive": true
+    },
+    {
+        "id": 4,
+        "title": "StreamVault",
+        "alt": "streamVault",
+        "img": "randomQuoteGenerator.jpg",
+        "description": "Online movie and series website",
+        "link": "https://blumrj.github.io/random-quotes/",
+        "technologies": ["Vue","HTML", "CSS", "JavaScript", "Bootstrap"],
+        "isResponsive": true
+    },
+    {
+        "id": 5,
+        "title": "Random quote generator",
+        "alt": "randomQuoteGenerator",
+        "img": "randomQuoteGenerator.jpg",
+        "description": "Random Quote Generator",
+        "link": "https://blumrj.github.io/random-quotes/",
+        "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+        "isResponsive": true
+    },
+    {
+        "id": 6,
+        "title": "PHP Register Authentification",
+        "alt": "registerAuthentification",
+        "img": "randomQuoteGenerator.jpg",
+        "description": "Login and registration form with e-mail authentification",
+        "link": "https://blumrj.github.io/random-quotes/",
+        "technologies": ["PHP", "HTML", "CSS", "JavaScript"],
+        "isResponsive": true
+    }
+]
