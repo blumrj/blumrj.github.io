@@ -1,4 +1,3 @@
-
 (function() {
   "use strict";
 
@@ -61,21 +60,113 @@
 
 var projectsSection = document.querySelector("#projects .row")
 var technologiesSection = document.querySelector("#technologies .row")
-var body = document.body
-
-
-async function getJson(url){
-  try {
-    var res = await fetch(url)
-    return await res.json()
-  } catch (error) {
-    console.log(error);
+//zao mi je sto moram ovo da uradim, sori
+var projects = [
+  {
+      "id": 1,
+      "title": "Zest",
+      "alt": "zest",
+      "img": "zest.png",
+      "description": "A restaurant website",
+      "link": "https://blumrj.github.io/zest/#1",
+      "technologies": ["HTML", "CSS", "JavaScript"],
+      "isResponsive": true
+  },
+  {
+      "id": 2,
+      "title": "Bike Garage",
+      "alt": "bikeGarage",
+      "img": "garage.jpg",
+      "description": "Bike garage website",
+      "link": "https://blumrj.github.io/garage/",
+      "technologies": ["HTML", "CSS"],
+      "isResponsive": false
+  },
+  {
+      "id": 3,
+      "title": "Bookwise",
+      "alt": "bookwise",
+      "img": "bookwise.jpg",
+      "description": "Online bookstore",
+      "link": "https://blumrj.github.io/random-quotes/",
+      "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+      "isResponsive": true
+  },
+  {
+      "id": 4,
+      "title": "StreamVault",
+      "alt": "streamVault",
+      "img": "randomQuoteGenerator.jpg",
+      "description": "Online movie and series website",
+      "link": "https://blumrj.github.io/random-quotes/",
+      "technologies": ["Vue","HTML", "CSS", "JavaScript", "Bootstrap"],
+      "isResponsive": true
+  },
+  {
+      "id": 5,
+      "title": "Random quote generator",
+      "alt": "randomQuoteGenerator",
+      "img": "randomQuoteGenerator.jpg",
+      "description": "Random Quote Generator",
+      "link": "https://blumrj.github.io/random-quotes/",
+      "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      "isResponsive": true
+  },
+  {
+      "id": 6,
+      "title": "PHP Register Authentification",
+      "alt": "registerAuthentification",
+      "img": "randomQuoteGenerator.jpg",
+      "description": "Login and registration form with e-mail authentification",
+      "link": "https://blumrj.github.io/random-quotes/",
+      "technologies": ["PHP", "HTML", "CSS", "JavaScript"],
+      "isResponsive": true
   }
-}
+]
+var techs = [
+  {
+      "id": 1,
+      "name": "HTML",
+      "img": "html.png"
+  },
+  {
+      "id": 2,
+      "name": "CSS",
+      "img": "css.png"
+  },
+  {
+      "id": 3,
+      "name": "JavaScript",
+      "img": "js.png"
+  },
+  {
+      "id": 4,
+      "name": "PHP",
+      "img": "php.png"
+  },
+  {
+      "id": 5,
+      "name": "Vue",
+      "img": "vue.png"
+  },
+  {
+      "id": 6,
+      "name": "Node.js",
+      "img": "node.png"
+  },
+  {
+      "id": 7,
+      "name": "Bootstrap",
+      "img": "bootstrap.png"
+  },
+  {
+      "id": 8,
+      "name": "MySQL",
+      "img": "mysql.png"
+  }
+]
 
 async function renderProjects(){
-  var url = "../../projects.json"
-  var projects = await getJson(url)
   projects.forEach((p) => {
     createACard(p.img, p.title, p.description, p.link, p.alt)
     createAProjectModal(p.alt, p.title, p.img, p.description, p.technologies, p.isResponsive, p.link)
@@ -84,8 +175,6 @@ async function renderProjects(){
 renderProjects()
 
 async function renderTechs(){
-  var url = "../../technologies.json"
-  var techs = await getJson(url)
   techs.forEach((t) => {
     createATech(t.img, t.name)
   })
@@ -94,15 +183,20 @@ renderTechs()
 
 function createACard(img, title, desc, link, modalTarget){
   img = img ? img : "portfolio-3.jpg"
-  var html = `<div class="col-lg-4 col-md-6"><div class="card">
-  <img src="assets/img/portfolio/${img}" class="card-img" alt="${title}">
-  <div class="card-img-overlay">
-    <h5 class="card-title">${title}</h5>
-    <p class="card-text"><small>${desc}</small></p>
-    <p class="card-text"><a href="${link}" target="_blank">Visit website</a></p>
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${modalTarget}">See more</button>
-  </div>
-</div></div>`
+  var html = `
+  <div class="col">
+    <div class="card h-100">
+      <img src="assets/img/portfolio/${img}" class="card-img" alt="${title}">
+      <div class="card-body d-grid">
+        <h5 class="card-title">${title}</h5>
+        <p class="card-text">${desc}</p>
+        <div class="align-self-end">
+          <a href="${link}" target="_blank" class="btn btn-primary">Visit website</a>
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${modalTarget}">See more</button>
+        </div>
+      </div>
+    </div>
+  </div>`
 
 projectsSection.innerHTML += html
 
@@ -112,7 +206,7 @@ function createAProjectModal(id, title, img, desc, tecs, isResponsive, link){
   var responsive = isResponsive ? "Yes" : "No";
   var technologies = tecs.join(", ");
   var html = `<div class="modal fade" id="${id}" tabindex="-1" aria-labelledby="${id}Label" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable">
+  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="${id}Label">${title}</h1>
@@ -133,7 +227,7 @@ function createAProjectModal(id, title, img, desc, tecs, isResponsive, link){
   </div>
 </div>`
 
-body.innerHTML += html
+document.querySelector("#modals").innerHTML += html
 }
 
 function createATech(img, alt){
