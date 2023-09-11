@@ -88,7 +88,7 @@ var projects = [
       "alt": "bookwise",
       "img": "bookwise.jpg",
       "description": "Online bookstore",
-      "link": "https://blumrj.github.io/random-quotes/",
+      "link": "https://bookwisebookstore.000webhostapp.com/",
       "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
       "isResponsive": true
   },
@@ -96,9 +96,9 @@ var projects = [
       "id": 4,
       "title": "StreamVault",
       "alt": "streamVault",
-      "img": "randomQuoteGenerator.jpg",
+      "img": "streamVault.jpg",
       "description": "Online movie and series website",
-      "link": "https://blumrj.github.io/random-quotes/",
+      "link": "https://streamvault-rho.vercel.app/#/",
       "technologies": ["Vue","HTML", "CSS", "JavaScript", "Bootstrap"],
       "isResponsive": true
   },
@@ -112,16 +112,16 @@ var projects = [
       "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "isResponsive": true
   },
-  {
-      "id": 6,
-      "title": "PHP Register Authentification",
-      "alt": "registerAuthentification",
-      "img": "randomQuoteGenerator.jpg",
-      "description": "Login and registration form with e-mail authentification",
-      "link": "https://blumrj.github.io/random-quotes/",
-      "technologies": ["PHP", "HTML", "CSS", "JavaScript"],
-      "isResponsive": true
-  }
+  // {
+  //     "id": 6,
+  //     "title": "PHP Register Authentification",
+  //     "alt": "registerAuthentification",
+  //     "img": "randomQuoteGenerator.jpg",
+  //     "description": "Login and registration form with e-mail authentification",
+  //     "link": "https://blumrj.github.io/random-quotes/",
+  //     "technologies": ["PHP", "HTML", "CSS", "JavaScript"],
+  //     "isResponsive": true
+  // }
 ]
 var techs = [
   {
