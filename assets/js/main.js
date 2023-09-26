@@ -123,7 +123,7 @@ var projects = [
     "isResponsive": true
 },
   // {
-  //     "id": 6,
+  //     "id": 7,
   //     "title": "PHP Register Authentification",
   //     "alt": "registerAuthentification",
   //     "img": "randomQuoteGenerator.jpg",
