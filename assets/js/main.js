@@ -112,6 +112,16 @@ var projects = [
       "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
       "isResponsive": true
   },
+  {
+    "id": 6,
+    "title": "Task Manager",
+    "alt": "taskManager",
+    "img": "taskManager.jpg",
+    "description": "Create lists and tasks to do",
+    "link": "https://lists-and-tasks.vercel.app/",
+    "technologies": ["Express.js", "MongoDB", "Mongoose", "HTML", "CSS", "JavaScript", "Bootstrap"],
+    "isResponsive": true
+},
   // {
   //     "id": 6,
   //     "title": "PHP Register Authentification",
