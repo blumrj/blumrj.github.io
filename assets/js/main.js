@@ -16,16 +16,16 @@
   /**
    * Easy event listener function
    */
-  const on = (type, el, listener, all = false) => {
-    let selectEl = select(el, all)
-    if (selectEl) {
-      if (all) {
-        selectEl.forEach(e => e.addEventListener(type, listener))
-      } else {
-        selectEl.addEventListener(type, listener)
-      }
-    }
-  }
+  // const on = (type, el, listener, all = false) => {
+  //   let selectEl = select(el, all)
+  //   if (selectEl) {
+  //     if (all) {
+  //       selectEl.forEach(e => e.addEventListener(type, listener))
+  //     } else {
+  //       selectEl.addEventListener(type, listener)
+  //     }
+  //   }
+  // }
 
   /**
    * Easy on scroll event listener 
@@ -58,7 +58,7 @@
 
 })()
 
-var projectsSection = document.querySelector("#projects .row")
+var projectsSection = document.querySelector("#projects #projectsDiv")
 var technologiesSection = document.querySelector("#technologies .row")
 //zao mi je sto moram ovo da uradim, sori
 var projects = [
@@ -70,7 +70,8 @@ var projects = [
       "description": "A restaurant website",
       "link": "https://blumrj.github.io/zest/#1",
       "technologies": ["HTML", "CSS", "JavaScript"],
-      "isResponsive": true
+      "isResponsive": true,
+      "year": 2022
   },
   {
       "id": 2,
@@ -80,7 +81,8 @@ var projects = [
       "description": "Bike garage website",
       "link": "https://blumrj.github.io/garage/",
       "technologies": ["HTML", "CSS"],
-      "isResponsive": false
+      "isResponsive": false,
+      "year": 2021
   },
   {
       "id": 3,
@@ -90,7 +92,8 @@ var projects = [
       "description": "Online bookstore",
       "link": "https://bookwisebookstore.000webhostapp.com/",
       "technologies": ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
-      "isResponsive": true
+      "isResponsive": true,
+      "year": 2023
   },
   {
       "id": 4,
@@ -100,7 +103,8 @@ var projects = [
       "description": "Online movie and series website",
       "link": "https://streamvault-rho.vercel.app/#/",
       "technologies": ["Vue","HTML", "CSS", "JavaScript", "Bootstrap"],
-      "isResponsive": true
+      "isResponsive": true,
+      "year": 2023
   },
   {
       "id": 5,
@@ -110,7 +114,8 @@ var projects = [
       "description": "Random Quote Generator",
       "link": "https://blumrj.github.io/random-quotes/",
       "technologies": ["HTML", "CSS", "JavaScript", "Bootstrap"],
-      "isResponsive": true
+      "isResponsive": true,
+      "year": 2023
   },
   {
     "id": 6,
@@ -120,7 +125,8 @@ var projects = [
     "description": "Create lists and tasks to do",
     "link": "https://lists-and-tasks.vercel.app/",
     "technologies": ["Express.js", "MongoDB", "Mongoose", "HTML", "CSS", "JavaScript", "Bootstrap"],
-    "isResponsive": true
+    "isResponsive": true,
+    "year": 2023
 },
   // {
   //     "id": 7,
@@ -176,13 +182,63 @@ var techs = [
   }
 ]
 
-async function renderProjects(){
+// var filterTech = techs.filter((t) => { return t.id > 2 })
+
+// filterTech.forEach((t) => {
+//   var html = `<option value="${t.id}">${t.name}</option>`
+//   document.querySelector("#filterDdl").innerHTML += html
+// })
+
+function sortProjects(projects, isReversed, isDefault){
+  if(isReversed){
+    return projects.sort((p1, p2) => p1.year - p2.year || p1.id - p2.id).reverse()
+  }
+  if(isDefault){
+    return projects.sort((p1, p2) => p1.id - p2.id)
+  }
+  return projects.sort((p1, p2) => p1.year - p2.year || p1.id - p2.id)
+}
+
+
+var sortDdl = document.querySelector("#sortDdl")
+
+sortDdl.addEventListener("change", () => {
+  var isReversed
+  var isDefault
+  var chosenValue = sortDdl.value
+
+  if(chosenValue == "yearASC"){
+    isReversed = false
+    isDefault = false
+  }
+  if(chosenValue == "yearDESC"){
+    isReversed = true
+    isDefault = false
+  }
+  if(chosenValue == "default"){
+    isReversed = false
+    isDefault = true
+  }
+
+  var sortedProjects = sortProjects(projects, isReversed, isDefault)
+    renderProjects(sortedProjects)
+})
+
+async function renderProjects(projectsArray){
+  var html = ""
+  projectsArray.forEach((p) => {
+    html += createACard(p.img, p.title, p.description, p.link, p.year, p.alt)
+  })
+  projectsSection.innerHTML = html
+}
+renderProjects(projects)
+
+async function renderModals(projects){
   projects.forEach((p) => {
-    createACard(p.img, p.title, p.description, p.link, p.alt)
-    createAProjectModal(p.alt, p.title, p.img, p.description, p.technologies, p.isResponsive, p.link)
+    createAProjectModal(p.alt, p.title, p.img, p.description, p.technologies, p.isResponsive, p.link, p.year)
   })
 }
-renderProjects()
+renderModals(projects)
 
 async function renderTechs(){
   techs.forEach((t) => {
@@ -191,8 +247,7 @@ async function renderTechs(){
 }
 renderTechs() 
 
-function createACard(img, title, desc, link, modalTarget){
-  img = img ? img : "portfolio-3.jpg"
+function createACard(img, title, desc, link, year, modalTarget){
   var html = `
   <div class="col">
     <div class="card h-100">
@@ -200,6 +255,7 @@ function createACard(img, title, desc, link, modalTarget){
       <div class="card-body d-grid">
         <h5 class="card-title">${title}</h5>
         <p class="card-text">${desc}</p>
+        <p class="card-text">year: ${year}</p>
         <div class="align-self-end">
           <a href="${link}" target="_blank" class="btn btn-primary">Visit website</a>
           <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${modalTarget}">See more</button>
@@ -208,11 +264,13 @@ function createACard(img, title, desc, link, modalTarget){
     </div>
   </div>`
 
-projectsSection.innerHTML += html
+// projectsSection.innerHTML += html
+
+return html
 
 }
 
-function createAProjectModal(id, title, img, desc, tecs, isResponsive, link){
+function createAProjectModal(id, title, img, desc, tecs, isResponsive, link, year){
   var responsive = isResponsive ? "Yes" : "No";
   var technologies = tecs.join(", ");
   var html = `<div class="modal fade" id="${id}" tabindex="-1" aria-labelledby="${id}Label" aria-hidden="true">
@@ -226,8 +284,9 @@ function createAProjectModal(id, title, img, desc, tecs, isResponsive, link){
         <img src="assets/img/portfolio/${img}" alt="${title}" class="img-fluid">
         <div class="mt-3">
           <p>Description: ${desc}</p>
-          <p>Technologies used: ${technologies}</p>
+          <p>Languages: ${technologies}</p>
           <p>Responsive: ${responsive}</p>
+          <p>Year: ${year}</p>
         </div>
       </div>
       <div class="modal-footer">
